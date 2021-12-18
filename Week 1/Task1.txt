@@ -1,0 +1,9 @@
+you are required to create a software to manage the stock of a furniture shop located in auckland city
+as a prototype create a class name product to represent following information
+1. name 
+2. price
+3. weight
+4. colour 
+5. make
+6. quantity
+you have to make sure none of the items saved with invalid/default values 

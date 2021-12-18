@@ -1,0 +1,149 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package unittestingexmapledemo;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author Michael
+ */
+public class BankAccountTest {
+    
+    BankAccount account;
+    
+    public BankAccountTest() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+//        account = new BankAccount("Louis", 1000, "chk");
+    }
+    
+    @After
+    public void tearDown() {
+        account = null;
+    }
+
+//    @Test
+//    public void testValidDepositMethod() {
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//        
+//    }
+//
+//    /**
+//     * Test of getAccountHolderName method, of class BankAccount.
+//     */
+//    @Test
+//    public void testGetAccountHolderName() {
+//        System.out.println("getAccountHolderName");
+//        BankAccount instance = null;
+//        String expResult = "";
+//        String result = instance.getAccountHolderName();
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//
+//    /**
+//     * Test of setAccountHolderName method, of class BankAccount.
+//     */
+    @Test
+    public void testSetAccountHolderName() {
+       account.setAccountHolderName("abc");
+       assertEquals("abc", account.getAccountHolderName());
+    }
+
+    /**
+     * Test of getBalance method, of class BankAccount.
+     */
+    @Test
+    public void testGetBalance() {
+        assertEquals(1000, account.getBalance(),0.0);
+    }
+
+    /**
+     * Test of deposit method, of class BankAccount.
+     */
+    @Test
+    public void testDeposit() {
+       // balalnce before deposit
+        double currentBalance = account.getBalance();
+       // money after deposit
+        double money = 100;
+       // Deposit money
+        account.deposit(money);
+       // test the balance after depositing money
+        assertEquals(currentBalance+money,account.getBalance(),0.0);        
+       
+    }
+    @Test
+ public void testInvalidDeposit() {
+       // balalnce before deposit
+        double currentBalance = account.getBalance();
+       // money after deposit
+        double money = -100;
+       // Deposit money
+        account.deposit(money);
+       // test the balance after depositing money
+        assertEquals(currentBalance,account.getBalance(),0.0);        
+       
+    }
+    /**
+     * Test of withdraw method, of class BankAccount.
+     */
+    @Test
+    public void testValidWithdraw() {
+        
+        double currentBalance = account.getBalance();
+        double money = 100;
+        account.withdraw(money);
+        assertEquals(currentBalance-money ,account.getBalance(),0.0);
+        
+    }
+    @Test
+    public void testInValidWithdraw() {
+        
+        double currentBalance = account.getBalance();
+        double money = 100;
+        account.withdraw(money);
+        assertEquals(currentBalance-money ,account.getBalance(),0.0);
+        
+    }
+
+    /**
+     * Test of getType method, of class BankAccount.
+     */
+    @Test
+    public void testGetType() {
+        assertEquals("chk",account.getType());
+    }
+
+//    /**
+//     * Test of setType method, of class BankAccount.
+//     */
+//    @Test
+//    public void testSetType() {
+//        account.setType("saving");
+//        assertEquals("saving",account.getType());
+//        
+//    }
+    
+}

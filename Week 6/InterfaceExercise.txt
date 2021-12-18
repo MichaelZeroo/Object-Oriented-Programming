@@ -1,0 +1,11 @@
+in library there are a number of materials such as book magazine dvds n news paper
+please not it down that not all the items are be issued to user
+for each of these items there are rules, rules are:
+no.1 - book can be issued a max of 10 times
+no.2 - magazine can be issued a max of 3 
+no.3 - dvd can be issued 100 times
+
+create a software where the customer wants to know which items can be issueable and which item can be issued for how long 
+use the concept of interface called issueable and method called issue
+create classes
+ 

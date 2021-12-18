@@ -1,0 +1,11 @@
+furniture shop selling furniture items for more than 10 years 
+admin staff want to print all the furniture items 
+sort by price 
+sort by manufacture date 
+
+name
+price
+manufacture date 
+warrantyPeriod 
+
+make sure the manufacture date of all items should be valid date.(must be valid valeu no future dates)
